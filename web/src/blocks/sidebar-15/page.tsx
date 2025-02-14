@@ -11,7 +11,14 @@ import { SidebarRight } from "./sidebar-right";
 
 export function Sidebar15() {
   return (
-    <SidebarProvider>
+    <SidebarProvider
+      // https://ui.shadcn.com/docs/components/sidebar#width
+      style={{
+        // @ts-ignore
+        "--sidebar-width": "22rem",
+        "--sidebar-width-mobile": "22rem",
+      }}
+    >
       <SidebarLeft />
       <SidebarInset>
         <header className="sticky top-0 flex h-14 shrink-0 items-center gap-2 bg-background">
